@@ -1,31 +1,31 @@
-<!DOCTYPE html>
+
+                     <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Lourival Oliveira - Advogado | Salvador e Região</title>
+    <title>Dr. Lourival Oliveira - Advogado | Escritório Jurídico em Salvador</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #1a365d;
-            --primary-dark: #0f2848;
-            --primary-light: #2d4a7c;
-            --secondary: #d4af37;
-            --secondary-dark: #b8941f;
-            --accent: #e63946;
+            --primary: #0c2d48;
+            --primary-dark: #07182e;
+            --primary-light: #145da0;
+            --secondary: #b68d40;
+            --secondary-dark: #9c7a32;
+            --accent: #2e8b57;
             --light: #f8f9fa;
             --gray: #6c757d;
             --dark: #212529;
-            --success: #2a9d8f;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
             --radius: 12px;
             --transition: all 0.3s ease;
@@ -51,21 +51,21 @@
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Crimson Text', serif;
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 1.5rem;
         }
 
         h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
+            font-size: 3.8rem;
+            font-weight: 700;
         }
 
         h2 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             position: relative;
-            padding-bottom: 1rem;
+            padding-bottom: 1.2rem;
         }
 
         h2:after {
@@ -75,17 +75,18 @@
             left: 0;
             width: 80px;
             height: 5px;
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            background-color: var(--secondary);
             border-radius: 5px;
         }
 
         h3 {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
         }
 
         p {
             margin-bottom: 1.5rem;
             color: var(--gray);
+            font-size: 1.1rem;
         }
 
         .container {
@@ -99,7 +100,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 32px;
+            padding: 16px 36px;
             background-color: var(--primary);
             color: white;
             text-decoration: none;
@@ -108,13 +109,13 @@
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.05rem;
             gap: 10px;
             position: relative;
             overflow: hidden;
         }
 
-        .btn:before {
+        .btn:after {
             content: '';
             position: absolute;
             top: 0;
@@ -125,7 +126,7 @@
             transition: 0.5s;
         }
 
-        .btn:hover:before {
+        .btn:hover:after {
             left: 100%;
         }
 
@@ -161,7 +162,7 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 70px;
         }
 
         .section-header h2:after {
@@ -201,17 +202,35 @@
         }
 
         .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            width: 55px;
+            height: 55px;
+            background-color: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 1.8rem;
             box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-icon:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary-light), var(--secondary));
+            opacity: 0.8;
+        }
+
+        .logo-icon span {
+            position: relative;
+            z-index: 2;
         }
 
         .logo-text {
@@ -220,17 +239,19 @@
         }
 
         .logo-name {
-            font-family: 'Merriweather', serif;
-            font-weight: 900;
-            font-size: 1.8rem;
+            font-family: 'Crimson Text', serif;
+            font-weight: 700;
+            font-size: 1.9rem;
             color: var(--primary);
             line-height: 1.2;
+            letter-spacing: -0.5px;
         }
 
         .logo-tagline {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--gray);
             font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
         nav {
@@ -241,7 +262,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 35px;
         }
 
         .nav-menu li a {
@@ -261,7 +282,7 @@
             left: 0;
             width: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            background-color: var(--secondary);
             border-radius: 3px;
             transition: var(--transition);
         }
@@ -284,7 +305,7 @@
             z-index: 1001;
         }
 
-        /* Banner Slider - AGORA NO TOPO */
+        /* Banner Slider */
         .banner-section {
             margin-top: 100px;
             padding: 0;
@@ -301,7 +322,7 @@
 
         .banner-slides {
             width: 100%;
-            height: 600px;
+            height: 700px;
             position: relative;
         }
 
@@ -315,56 +336,55 @@
             transition: opacity 1s ease-in-out;
             display: flex;
             align-items: center;
-            padding: 0 80px;
+            padding: 0 100px;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
         }
 
         .banner-slide.active {
             opacity: 1;
         }
 
+        /* Imagens profissionais para o banner */
         .banner-slide:nth-child(1) {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: linear-gradient(rgba(12, 45, 72, 0.85), rgba(12, 45, 72, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
 
         .banner-slide:nth-child(2) {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: linear-gradient(rgba(12, 45, 72, 0.85), rgba(12, 45, 72, 0.8)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80');
         }
 
         .banner-slide:nth-child(3) {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-image: linear-gradient(rgba(12, 45, 72, 0.85), rgba(12, 45, 72, 0.8)), url('https://images.unsplash.com/photo-1563461660947-5075664b9d8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80');
         }
 
         .banner-slide:nth-child(4) {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: linear-gradient(rgba(12, 45, 72, 0.85), rgba(12, 45, 72, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
 
         .slide-content {
-            max-width: 700px;
+            max-width: 750px;
             color: white;
-            animation: fadeInLeft 1s ease;
+            animation: fadeInUp 1s ease;
         }
 
-        .slide-content h2 {
+        .slide-content h1 {
             color: white;
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-        }
-
-        .slide-content h2:after {
-            background: var(--secondary);
+            font-size: 4rem;
+            margin-bottom: 25px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .slide-content p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 35px;
         }
 
         .banner-nav {
             position: absolute;
-            bottom: 30px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -390,7 +410,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.2);
             color: white;
             border: none;
             width: 60px;
@@ -403,42 +423,67 @@
             cursor: pointer;
             transition: var(--transition);
             z-index: 10;
+            backdrop-filter: blur(5px);
         }
 
         .banner-prev:hover, .banner-next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.1);
         }
 
         .banner-prev {
-            left: 30px;
+            left: 40px;
         }
 
         .banner-next {
-            right: 30px;
+            right: 40px;
         }
 
-        /* Hero Section - REMOVIDA, BANNER ESTÁ NO TOPO */
-        
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+
+        .cta-container {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-container h2 {
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
         /* Features */
         .features {
-            background-color: var(--light);
+            background-color: white;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
 
         .feature-card {
-            background-color: white;
+            background-color: var(--light);
             border-radius: var(--radius);
-            padding: 40px 30px;
+            padding: 50px 35px;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            border-top: 5px solid var(--secondary);
         }
 
         .feature-card:hover {
@@ -447,44 +492,75 @@
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            width: 90px;
+            height: 90px;
+            background-color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            color: white;
-            font-size: 2rem;
+            margin: 0 auto 30px;
+            color: var(--primary);
+            font-size: 2.2rem;
             box-shadow: var(--shadow);
+            border: 2px solid var(--secondary);
         }
 
         .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.7rem;
+            margin-bottom: 20px;
+            color: var(--primary);
         }
 
-        /* CTA Buttons */
-        .cta-buttons {
-            text-align: center;
-            padding: 60px 0;
-            background-color: white;
+        /* Sobre */
+        .sobre-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
         }
 
-        .cta-buttons h2 {
+        .sobre-img {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 550px;
+            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .sobre-text h2 {
             margin-bottom: 30px;
         }
 
-        .cta-buttons .btn {
-            margin: 0 10px 15px;
+        .sobre-list {
+            list-style: none;
+            margin-top: 25px;
         }
 
-        /* Areas */
+        .sobre-list li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .sobre-list i {
+            color: var(--secondary);
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Áreas de Atuação */
+        .areas {
+            background-color: var(--light);
+        }
+
         .areas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 35px;
         }
 
         .area-card {
@@ -502,26 +578,26 @@
         }
 
         .area-image {
-            height: 200px;
+            height: 220px;
             background-size: cover;
             background-position: center;
         }
 
-        /* Definição de imagens específicas para cada área */
+        /* Imagens específicas para cada área */
         .area-card:nth-child(1) .area-image {
             background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
         
         .area-card:nth-child(2) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-image: url('https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
         
         .area-card:nth-child(3) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
         
         .area-card:nth-child(4) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80');
+            background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
         
         .area-card:nth-child(5) .area-image {
@@ -529,37 +605,38 @@
         }
         
         .area-card:nth-child(6) .area-image {
-            background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
         }
 
         .area-content {
-            padding: 30px;
+            padding: 35px;
         }
 
         .area-content h3 {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            gap: 12px;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--primary);
         }
 
         .area-icon {
             color: var(--secondary);
-            font-size: 1.3rem;
+            font-size: 1.5rem;
         }
 
         .area-list {
             list-style: none;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .area-list li {
-            padding: 8px 0;
+            padding: 10px 0;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .area-list li:last-child {
@@ -567,19 +644,15 @@
         }
 
         .area-list i {
-            color: var(--success);
-            font-size: 0.9rem;
+            color: var(--accent);
+            font-size: 1rem;
         }
 
-        /* Articles */
-        .articles {
-            background-color: var(--light);
-        }
-
+        /* Artigos */
         .articles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 35px;
         }
 
         .article-card {
@@ -599,26 +672,26 @@
         }
 
         .article-image {
-            height: 200px;
+            height: 220px;
             background-size: cover;
             background-position: center;
         }
 
-        /* Imagens específicas para artigos */
+        /* Imagens para artigos */
         .article-card:nth-child(1) .article-image {
-            background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
         }
         
         .article-card:nth-child(2) .article-image {
-            background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80');
         }
         
         .article-card:nth-child(3) .article-image {
-            background-image: url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
         
         .article-card:nth-child(4) .article-image {
-            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-image: url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80');
         }
 
         .article-content {
@@ -631,24 +704,25 @@
         .article-meta {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
             color: var(--gray);
         }
 
         .article-tag {
-            background-color: var(--primary-light);
+            background-color: var(--primary);
             color: white;
-            padding: 5px 12px;
+            padding: 6px 15px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 600;
         }
 
         .article-content h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             flex-grow: 1;
+            color: var(--primary);
         }
 
         .article-link {
@@ -658,16 +732,20 @@
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             transition: var(--transition);
         }
 
         .article-link:hover {
-            color: var(--accent);
-            gap: 12px;
+            color: var(--secondary);
+            gap: 15px;
         }
 
-        /* Calculators */
+        /* Calculadoras */
+        .calculators-section {
+            background-color: var(--light);
+        }
+
         .calculators-container {
             max-width: 900px;
             margin: 0 auto;
@@ -676,19 +754,20 @@
         .calculator-tabs {
             display: flex;
             justify-content: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
         }
 
         .calculator-tab {
-            padding: 15px 30px;
+            padding: 18px 35px;
             background-color: white;
             border: 2px solid var(--primary);
             border-radius: var(--radius);
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
+            font-size: 1.1rem;
         }
 
         .calculator-tab.active {
@@ -699,7 +778,7 @@
         .calculator-content {
             background-color: white;
             border-radius: var(--radius);
-            padding: 40px;
+            padding: 50px;
             box-shadow: var(--shadow);
         }
 
@@ -714,114 +793,105 @@
 
         .calculator h3 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            color: var(--primary);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-weight: 600;
+            color: var(--primary);
         }
 
         .form-control {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             border: 1px solid #ddd;
             border-radius: var(--radius);
             font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            font-size: 1.05rem;
             transition: var(--transition);
+            background-color: #f9f9f9;
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+            box-shadow: 0 0 0 3px rgba(12, 45, 72, 0.1);
+            background-color: white;
         }
 
         .calculator-result {
             background-color: var(--light);
-            padding: 25px;
+            padding: 30px;
             border-radius: var(--radius);
-            margin-top: 30px;
+            margin-top: 40px;
             text-align: center;
             display: none;
+            border-left: 5px solid var(--secondary);
         }
 
         .calculator-result h4 {
             color: var(--primary);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
         }
 
         .result-value {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             color: var(--accent);
-            margin: 20px 0;
+            margin: 25px 0;
         }
 
-        /* Sobre - Imagem de perfil */
-        .sobre-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .sobre-img {
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            height: 500px;
-            background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Contact */
+        /* Contato */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
         }
 
         .contact-info h3 {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            color: var(--primary);
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
-            margin-right: 20px;
+            font-size: 1.4rem;
+            margin-right: 25px;
             flex-shrink: 0;
+            box-shadow: var(--shadow);
         }
 
         .contact-details h4 {
-            margin-bottom: 5px;
-            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+            color: var(--primary);
         }
 
         .contact-form {
             background-color: white;
             border-radius: var(--radius);
-            padding: 40px;
+            padding: 50px;
             box-shadow: var(--shadow);
         }
 
@@ -829,20 +899,20 @@
         footer {
             background-color: var(--primary-dark);
             color: white;
-            padding: 80px 0 30px;
+            padding: 100px 0 40px;
         }
 
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
+            gap: 50px;
+            margin-bottom: 60px;
         }
 
         .footer-col h3 {
             color: white;
-            font-size: 1.5rem;
-            margin-bottom: 25px;
+            font-size: 1.6rem;
+            margin-bottom: 30px;
             position: relative;
         }
 
@@ -856,36 +926,36 @@
         }
 
         .footer-links li {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .footer-links a:hover {
             color: var(--secondary);
-            padding-left: 5px;
+            padding-left: 8px;
         }
 
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 40px;
+            right: 40px;
             width: 70px;
             height: 70px;
             background-color: #25D366;
@@ -909,14 +979,14 @@
         }
 
         /* Animations */
-        @keyframes fadeInLeft {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateX(-30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
 
@@ -943,7 +1013,7 @@
 
         .fade-in {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
@@ -952,28 +1022,28 @@
             transform: translateY(0);
         }
 
-        /* Responsiveness */
+        /* Responsividade */
         @media (max-width: 1200px) {
             h1 {
-                font-size: 3rem;
+                font-size: 3.2rem;
             }
             
             h2 {
-                font-size: 2.4rem;
+                font-size: 2.6rem;
             }
             
             .banner-slide {
-                padding: 0 60px;
+                padding: 0 80px;
             }
             
-            .slide-content h2 {
-                font-size: 2.8rem;
+            .slide-content h1 {
+                font-size: 3.5rem;
             }
         }
 
         @media (max-width: 992px) {
             h1 {
-                font-size: 2.6rem;
+                font-size: 2.8rem;
             }
             
             h2 {
@@ -981,24 +1051,28 @@
             }
             
             .banner-slides {
-                height: 500px;
+                height: 600px;
             }
             
-            .slide-content h2 {
-                font-size: 2.2rem;
+            .banner-slide {
+                padding: 0 60px;
+            }
+            
+            .slide-content h1 {
+                font-size: 3rem;
             }
             
             .slide-content p {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
             .sobre-container, .contact-container {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 60px;
             }
             
             .sobre-img {
-                height: 400px;
+                height: 450px;
                 order: -1;
             }
             
@@ -1010,11 +1084,11 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 300px;
+                width: 320px;
                 height: 100vh;
                 background-color: white;
                 flex-direction: column;
-                padding: 100px 30px 30px;
+                padding: 120px 40px 40px;
                 box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
                 transition: var(--transition);
                 z-index: 1000;
@@ -1046,37 +1120,45 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
             }
             
             h2 {
-                font-size: 1.9rem;
+                font-size: 2rem;
             }
             
             section {
-                padding: 70px 0;
+                padding: 80px 0;
             }
             
             .banner-slides {
-                height: 450px;
+                height: 550px;
             }
             
             .banner-slide {
                 padding: 0 40px;
             }
             
-            .slide-content h2 {
-                font-size: 1.9rem;
+            .slide-content h1 {
+                font-size: 2.5rem;
             }
             
             .slide-content p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             
             .banner-prev, .banner-next {
                 width: 50px;
                 height: 50px;
                 font-size: 1.2rem;
+            }
+            
+            .banner-prev {
+                left: 20px;
+            }
+            
+            .banner-next {
+                right: 20px;
             }
             
             .areas-grid, .articles-grid {
@@ -1090,8 +1172,16 @@
             
             .calculator-tab {
                 width: 100%;
-                max-width: 300px;
+                max-width: 320px;
                 text-align: center;
+            }
+            
+            .calculator-content {
+                padding: 40px 30px;
+            }
+            
+            .contact-form {
+                padding: 40px 30px;
             }
         }
 
@@ -1101,29 +1191,29 @@
             }
             
             .banner-slides {
-                height: 400px;
+                height: 500px;
             }
             
             .banner-slide {
-                padding: 0 20px;
+                padding: 0 25px;
             }
             
-            .slide-content h2 {
-                font-size: 1.7rem;
+            .slide-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
             
             .cta-buttons .btn {
                 width: 100%;
-                margin: 0 0 15px 0;
-                max-width: 300px;
+                max-width: 320px;
             }
             
-            .calculator-content {
-                padding: 30px 20px;
-            }
-            
-            .contact-form {
-                padding: 30px 20px;
+            .feature-card {
+                padding: 40px 25px;
             }
         }
     </style>
@@ -1133,7 +1223,9 @@
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <div class="logo-icon">LO</div>
+                <div class="logo-icon">
+                    <span>LO</span>
+                </div>
                 <div class="logo-text">
                     <div class="logo-name">Dr. Lourival Oliveira</div>
                     <div class="logo-tagline">Advogado - Salvador e Região</div>
@@ -1159,14 +1251,14 @@
         </div>
     </header>
 
-    <!-- Banner Slider - AGORA NO TOPO, LOGO APÓS O HEADER -->
+    <!-- Banner Slider -->
     <section class="banner-section" id="home">
         <div class="banner-slider">
             <div class="banner-slides">
                 <!-- Slide 1 -->
                 <div class="banner-slide active">
                     <div class="slide-content">
-                        <h2>Defesa Jurídica Estratégica em Salvador</h2>
+                        <h1>Defesa Jurídica Estratégica em Salvador</h1>
                         <p>Atuação em todas as instâncias jurídicas com planejamento personalizado para cada caso, maximizando as chances de sucesso.</p>
                         <a href="#contato" class="btn btn-secondary">Consultoria Personalizada</a>
                     </div>
@@ -1175,27 +1267,27 @@
                 <!-- Slide 2 -->
                 <div class="banner-slide">
                     <div class="slide-content">
-                        <h2>Direito Empresarial e Corporativo</h2>
-                        <p>Assessoria completa para empresas, desde a constituição até questões contratuais complexas e litígios comerciais.</p>
-                        <a href="#areas" class="btn btn-secondary">Saiba Mais</a>
+                        <h1>Escritório de Advocacia com Excelência</h1>
+                        <p>Mais de 15 anos de experiência oferecendo soluções jurídicas completas para pessoas físicas e jurídicas em Salvador e região.</p>
+                        <a href="#sobre" class="btn btn-secondary">Conheça o Advogado</a>
                     </div>
                 </div>
                 
                 <!-- Slide 3 -->
                 <div class="banner-slide">
                     <div class="slide-content">
-                        <h2>Direito da Família e Sucessões</h2>
-                        <p>Atuação sensível e estratégica em divórcios, guarda de filhos, pensão alimentícia e inventários com abordagem humanizada.</p>
-                        <a href="#areas" class="btn btn-secondary">Conheça Nossa Abordagem</a>
+                        <h1>Atendimento Personalizado e Humanizado</h1>
+                        <p>Entendemos suas necessidades jurídicas e oferecemos um atendimento diferenciado para cada caso com transparência e ética.</p>
+                        <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
                     </div>
                 </div>
                 
                 <!-- Slide 4 -->
                 <div class="banner-slide">
                     <div class="slide-content">
-                        <h2>Consultoria Preventiva</h2>
-                        <p>Evite problemas futuros com assessoria jurídica preventiva para pessoas físicas e jurídicas, identificando e mitigando riscos.</p>
-                        <a href="#contato" class="btn btn-secondary">Prevenir é Melhor</a>
+                        <h1>Resultados que Fazem a Diferença</h1>
+                        <p>Atuação estratégica focada em alcançar os melhores resultados para nossos clientes com eficiência e agilidade.</p>
+                        <a href="#areas" class="btn btn-secondary">Conheça Nossas Áreas</a>
                     </div>
                 </div>
             </div>
@@ -1216,16 +1308,20 @@
         </div>
     </section>
 
-    <!-- CTA Buttons - SEMPRE VISÍVEIS -->
-    <section class="cta-buttons">
-        <div class="container">
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-container">
             <h2>Precisa de Assistência Jurídica?</h2>
-            <div>
+            <p>O Dr. Lourival Oliveira está pronto para oferecer a melhor defesa jurídica para seu caso. Entre em contato agora mesmo para uma consulta inicial.</p>
+            <div class="cta-buttons">
                 <a href="#areas" class="btn btn-secondary">
                     <i class="fas fa-balance-scale"></i> Ver Áreas de Atuação
                 </a>
                 <a href="#contato" class="btn">
                     <i class="fas fa-phone-alt"></i> Agendar Consulta
+                </a>
+                <a href="https://wa.me/5571999998888" class="btn btn-outline" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
         </div>
@@ -1236,7 +1332,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Por que Escolher o Dr. Lourival Oliveira?</h2>
-                <p>Diferenciais que fazem a diferença na sua experiência jurídica</p>
+                <p>Diferenciais que garantem a excelência na prestação de serviços jurídicos</p>
             </div>
             
             <div class="features-grid">
@@ -1245,7 +1341,7 @@
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <h3>Atendimento Personalizado</h3>
-                    <p>Cada cliente recebe atenção individualizada com estratégia jurídica desenvolvida especificamente para suas necessidades.</p>
+                    <p>Cada cliente recebe atenção individualizada com estratégia jurídica desenvolvida especificamente para suas necessidades e objetivos.</p>
                 </div>
                 
                 <div class="feature-card fade-in">
@@ -1253,23 +1349,23 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Resultados Comprovados</h3>
-                    <p>Histórico comprovado de casos bem-sucedidos em diversas áreas do direito, com alto índice de satisfação dos clientes.</p>
+                    <p>Histórico comprovado de casos bem-sucedidos em diversas áreas do direito, com alto índice de satisfação e resultados positivos.</p>
                 </div>
                 
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-gavel"></i>
                     </div>
-                    <h3>Disponibilidade Integral</h3>
-                    <p>Atendimento flexível com horários adaptáveis e disponibilidade para esclarecer dúvidas quando necessário.</p>
+                    <h3>Experiência e Conhecimento</h3>
+                    <p>Mais de 15 anos de atuação no Direito Brasileiro, com formação sólida e constante atualização nas mais diversas áreas jurídicas.</p>
                 </div>
                 
                 <div class="feature-card fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Transparência Total</h3>
-                    <p>Comunicação clara sobre todas as etapas do processo, honorários e estratégias adotadas em cada caso.</p>
+                    <h3>Transparência e Ética</h3>
+                    <p>Comunicação clara sobre todas as etapas do processo, honorários justos e estratégias adotadas em cada caso com total transparência.</p>
                 </div>
             </div>
         </div>
@@ -1286,34 +1382,19 @@
             <div class="sobre-container">
                 <div class="sobre-img"></div>
                 
-                <div>
-                    <h3>Experiência e Formação</h3>
+                <div class="sobre-text">
+                    <h3>Experiência e Formação Acadêmica</h3>
                     <p>Dr. Lourival Oliveira é advogado com mais de 15 anos de atuação em Salvador e região, formado pela Universidade Federal da Bahia com pós-graduação em Direito Civil e Processo Civil.</p>
                     <p>Sua trajetória inclui passagens por renomados escritórios de advocacia antes de fundar seu próprio escritório, onde aplica conhecimento técnico aliado à sensibilidade para entender as necessidades específicas de cada cliente.</p>
-                    <p>Atua em todas as áreas do direito com foco em soluções personalizadas, sempre com ética, transparência e compromisso com os resultados.</p>
+                    <p>Atua em todas as áreas do direito com foco em soluções personalizadas, sempre com ética, transparência e compromisso com os resultados. Seu escritório se destaca pela abordagem estratégica de cada caso.</p>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Formação Acadêmica</h4>
-                            <p>Bacharel em Direito - UFBA</p>
-                            <p>Pós-graduado em Direito Civil e Processo Civil</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Especializações</h4>
-                            <p>Direito Civil e Empresarial</p>
-                            <p>Direito da Família e Sucessões</p>
-                            <p>Direito do Trabalho e Previdenciário</p>
-                        </div>
-                    </div>
+                    <ul class="sobre-list">
+                        <li><i class="fas fa-check-circle"></i> Mais de 15 anos de experiência jurídica</li>
+                        <li><i class="fas fa-check-circle"></i> Atuação em todo o território nacional</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento personalizado e humanizado</li>
+                        <li><i class="fas fa-check-circle"></i> Transparência e ética profissional</li>
+                        <li><i class="fas fa-check-circle"></i> Formação contínua e atualização constante</li>
+                    </ul>
                     
                     <a href="#contato" class="btn" style="margin-top: 20px;">
                         <i class="fas fa-calendar-alt"></i> Agendar Consulta
@@ -1339,10 +1420,10 @@
                         <h3><i class="fas fa-balance-scale area-icon"></i> Direito Civil</h3>
                         <p>Atuação completa em questões contratuais, responsabilidade civil, direitos do consumidor, propriedade e posse.</p>
                         <ul class="area-list">
-                            <li><i class="fas fa-check-circle"></i> Contratos em geral</li>
-                            <li><i class="fas fa-check-circle"></i> Responsabilidade civil</li>
-                            <li><i class="fas fa-check-circle"></i> Direitos do consumidor</li>
-                            <li><i class="fas fa-check-circle"></i> Propriedade e posse</li>
+                            <li><i class="fas fa-check"></i> Contratos em geral</li>
+                            <li><i class="fas fa-check"></i> Responsabilidade civil</li>
+                            <li><i class="fas fa-check"></i> Direitos do consumidor</li>
+                            <li><i class="fas fa-check"></i> Propriedade e posse</li>
                         </ul>
                     </div>
                 </div>
@@ -1354,10 +1435,10 @@
                         <h3><i class="fas fa-briefcase area-icon"></i> Direito Empresarial</h3>
                         <p>Assessoria jurídica completa para empresas de todos os portes, desde a constituição até questões complexas.</p>
                         <ul class="area-list">
-                            <li><i class="fas fa-check-circle"></i> Constituição de empresas</li>
-                            <li><i class="fas fa-check-circle"></i> Contratos comerciais</li>
-                            <li><i class="fas fa-check-circle"></i> Recuperação judicial</li>
-                            <li><i class="fas fa-check-circle"></i> Fusões e aquisições</li>
+                            <li><i class="fas fa-check"></i> Constituição de empresas</li>
+                            <li><i class="fas fa-check"></i> Contratos comerciais</li>
+                            <li><i class="fas fa-check"></i> Recuperação judicial</li>
+                            <li><i class="fas fa-check"></i> Fusões e aquisições</li>
                         </ul>
                     </div>
                 </div>
@@ -1369,10 +1450,10 @@
                         <h3><i class="fas fa-home area-icon"></i> Direito da Família</h3>
                         <p>Atuação sensível e estratégica em questões familiares, sempre com abordagem humanizada e focada em soluções.</p>
                         <ul class="area-list">
-                            <li><i class="fas fa-check-circle"></i> Divórcio e separação</li>
-                            <li><i class="fas fa-check-circle"></i> Guarda de filhos</li>
-                            <li><i class="fas fa-check-circle"></i> Pensão alimentícia</li>
-                            <li><i class="fas fa-check-circle"></i> Inventário e partilha</li>
+                            <li><i class="fas fa-check"></i> Divórcio e separação</li>
+                            <li><i class="fas fa-check"></i> Guarda de filhos</li>
+                            <li><i class="fas fa-check"></i> Pensão alimentícia</li>
+                            <li><i class="fas fa-check"></i> Inventário e partilha</li>
                         </ul>
                     </div>
                 </div>
@@ -1384,10 +1465,10 @@
                         <h3><i class="fas fa-user-tie area-icon"></i> Direito do Trabalho</h3>
                         <p>Defesa de direitos trabalhistas tanto para empregados quanto para empregadores com estratégias personalizadas.</p>
                         <ul class="area-list">
-                            <li><i class="fas fa-check-circle"></i> Reclamação trabalhista</li>
-                            <li><i class="fas fa-check-circle"></i> Acordos trabalhistas</li>
-                            <li><i class="fas fa-check-circle"></i> Defesa do empregador</li>
-                            <li><i class="fas fa-check-circle"></i> Assédio moral</li>
+                            <li><i class="fas fa-check"></i> Reclamação trabalhista</li>
+                            <li><i class="fas fa-check"></i> Acordos trabalhistas</li>
+                            <li><i class="fas fa-check"></i> Defesa do empregador</li>
+                            <li><i class="fas fa-check"></i> Assédio moral</li>
                         </ul>
                     </div>
                 </div>
@@ -1399,10 +1480,10 @@
                         <h3><i class="fas fa-user-shield area-icon"></i> Direito Penal</h3>
                         <p>Defesa criminal em todas as instâncias, com atuação estratégica focada na preservação de direitos e garantias.</p>
                         <ul class="area-list">
-                            <li><i class="fas fa-check-circle"></i> Defesa criminal</li>
-                            <li><i class="fas fa-check-circle"></i> Habeas corpus</li>
-                            <li><i class="fas fa-check-circle"></i> Recursos penais</li>
-                            <li><i class="fas fa-check-circle"></i> Execução penal</li>
+                            <li><i class="fas fa-check"></i> Defesa criminal</li>
+                            <li><i class="fas fa-check"></i> Habeas corpus</li>
+                            <li><i class="fas fa-check"></i> Recursos penais</li>
+                            <li><i class="fas fa-check"></i> Execução penal</li>
                         </ul>
                     </div>
                 </div>
@@ -1414,10 +1495,10 @@
                         <h3><i class="fas fa-car area-icon"></i> Direito do Trânsito</h3>
                         <p>Defesa em processos administrativos e judiciais de trânsito, com foco na preservação da CNH e direitos do condutor.</p>
                         <ul class="area-list">
-                            <li><i class="fas fa-check-circle"></i> Defesa em infrações</li>
-                            <li><i class="fas fa-check-circle"></i> Cassação de CNH</li>
-                            <li><i class="fas fa-check-circle"></i> Processos administrativos</li>
-                            <li><i class="fas fa-check-circle"></i> Acidentes de trânsito</li>
+                            <li><i class="fas fa-check"></i> Defesa em infrações</li>
+                            <li><i class="fas fa-check"></i> Cassação de CNH</li>
+                            <li><i class="fas fa-check"></i> Processos administrativos</li>
+                            <li><i class="fas fa-check"></i> Acidentes de trânsito</li>
                         </ul>
                     </div>
                 </div>
@@ -1491,14 +1572,14 @@
                 </div>
             </div>
             
-            <div class="text-center" style="margin-top: 50px;">
+            <div class="text-center" style="margin-top: 60px;">
                 <a href="#" class="btn">Ver Todos os Artigos <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
     <!-- Calculadoras Jurídicas -->
-    <section id="calculadoras">
+    <section id="calculadoras" class="calculators-section">
         <div class="container">
             <div class="section-header">
                 <h2>Calculadoras Jurídicas</h2>
@@ -1627,7 +1708,7 @@
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="contact">
+    <section id="contato">
         <div class="container">
             <div class="section-header">
                 <h2>Entre em Contato</h2>
@@ -1716,7 +1797,7 @@
                         
                         <div class="form-group">
                             <label for="contact-mensagem">Mensagem</label>
-                            <textarea id="contact-mensagem" class="form-control" rows="5" required></textarea>
+                            <textarea id="contact-mensagem" class="form-control" rows="6" required></textarea>
                         </div>
                         
                         <button type="submit" class="btn">Enviar Mensagem</button>
@@ -1732,12 +1813,12 @@
             <div class="footer-container">
                 <div>
                     <h3>Dr. Lourival Oliveira</h3>
-                    <p>Advogado com mais de 15 anos de experiência, atuante em Salvador e região em todas as áreas do Direito.</p>
-                    <div style="margin-top: 20px; display: flex; gap: 15px;">
-                        <a href="#" style="color: white; font-size: 1.3rem;"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: white; font-size: 1.3rem;"><i class="fab fa-instagram"></i></a>
-                        <a href="#" style="color: white; font-size: 1.3rem;"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" style="color: white; font-size: 1.3rem;"><i class="fab fa-youtube"></i></a>
+                    <p>Advogado com mais de 15 anos de experiência, atuante em Salvador e região em todas as áreas do Direito. Comprometido com a excelência jurídica e resultados satisfatórios para seus clientes.</p>
+                    <div style="margin-top: 25px; display: flex; gap: 20px;">
+                        <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white; font-size: 1.4rem;"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
@@ -1778,7 +1859,7 @@
             
             <div class="copyright">
                 <p>&copy; 2023 Dr. Lourival Oliveira - Advogado. Todos os direitos reservados. OAB/BA 123.456</p>
-                <p style="margin-top: 10px;">Desenvolvido com excelência para atender suas necessidades jurídicas.</p>
+                <p style="margin-top: 15px;">Desenvolvido com excelência para atender suas necessidades jurídicas em Salvador e região.</p>
             </div>
         </div>
     </footer>

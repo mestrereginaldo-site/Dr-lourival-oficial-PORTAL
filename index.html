@@ -284,73 +284,24 @@
             z-index: 1001;
         }
 
-        /* Hero Banner */
-        .hero {
-            padding: 200px 0 100px;
-            background: linear-gradient(135deg, rgba(26, 54, 93, 0.95), rgba(41, 41, 41, 0.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
+        /* Banner Slider - AGORA NO TOPO */
+        .banner-section {
+            margin-top: 100px;
+            padding: 0;
             position: relative;
+            width: 100%;
             overflow: hidden;
         }
 
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.2) 0%, transparent 50%);
-        }
-
-        .hero-container {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 900px;
-        }
-
-        .hero h1 {
-            color: white;
-            margin-bottom: 25px;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 40px;
-            max-width: 700px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* Banner Slider */
         .banner-slider {
-            margin-top: 80px;
             width: 100%;
-            max-width: 1200px;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
+            max-width: 100%;
             position: relative;
         }
 
         .banner-slides {
             width: 100%;
-            height: 500px;
+            height: 600px;
             position: relative;
         }
 
@@ -365,6 +316,8 @@
             display: flex;
             align-items: center;
             padding: 0 80px;
+            background-size: cover;
+            background-position: center;
         }
 
         .banner-slide.active {
@@ -372,30 +325,30 @@
         }
 
         .banner-slide:nth-child(1) {
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.4) 100%), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
 
         .banner-slide:nth-child(2) {
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.4) 100%), url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
 
         .banner-slide:nth-child(3) {
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.4) 100%), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
         }
 
         .banner-slide:nth-child(4) {
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.4) 100%), url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
 
         .slide-content {
-            max-width: 600px;
+            max-width: 700px;
             color: white;
             animation: fadeInLeft 1s ease;
         }
 
         .slide-content h2 {
             color: white;
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             margin-bottom: 20px;
         }
 
@@ -404,7 +357,7 @@
         }
 
         .slide-content p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 30px;
         }
@@ -464,6 +417,8 @@
             right: 30px;
         }
 
+        /* Hero Section - REMOVIDA, BANNER ESTÁ NO TOPO */
+        
         /* Features */
         .features {
             background-color: var(--light);
@@ -510,6 +465,21 @@
             margin-bottom: 15px;
         }
 
+        /* CTA Buttons */
+        .cta-buttons {
+            text-align: center;
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .cta-buttons h2 {
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons .btn {
+            margin: 0 10px 15px;
+        }
+
         /* Areas */
         .areas-grid {
             display: grid;
@@ -535,6 +505,31 @@
             height: 200px;
             background-size: cover;
             background-position: center;
+        }
+
+        /* Definição de imagens específicas para cada área */
+        .area-card:nth-child(1) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .area-card:nth-child(2) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+        }
+        
+        .area-card:nth-child(3) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .area-card:nth-child(4) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80');
+        }
+        
+        .area-card:nth-child(5) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .area-card:nth-child(6) .area-image {
+            background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
 
         .area-content {
@@ -607,6 +602,23 @@
             height: 200px;
             background-size: cover;
             background-position: center;
+        }
+
+        /* Imagens específicas para artigos */
+        .article-card:nth-child(1) .article-image {
+            background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .article-card:nth-child(2) .article-image {
+            background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+        }
+        
+        .article-card:nth-child(3) .article-image {
+            background-image: url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        }
+        
+        .article-card:nth-child(4) .article-image {
+            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         }
 
         .article-content {
@@ -750,6 +762,24 @@
             font-weight: 700;
             color: var(--accent);
             margin: 20px 0;
+        }
+
+        /* Sobre - Imagem de perfil */
+        .sobre-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .sobre-img {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 500px;
+            background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
         }
 
         /* Contact */
@@ -935,6 +965,10 @@
             .banner-slide {
                 padding: 0 60px;
             }
+            
+            .slide-content h2 {
+                font-size: 2.8rem;
+            }
         }
 
         @media (max-width: 992px) {
@@ -946,21 +980,26 @@
                 font-size: 2.2rem;
             }
             
-            .hero {
-                padding: 180px 0 80px;
-            }
-            
             .banner-slides {
-                height: 450px;
+                height: 500px;
             }
             
             .slide-content h2 {
                 font-size: 2.2rem;
             }
             
-            .contact-container {
+            .slide-content p {
+                font-size: 1.1rem;
+            }
+            
+            .sobre-container, .contact-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+            
+            .sobre-img {
+                height: 400px;
+                order: -1;
             }
             
             .mobile-menu-btn {
@@ -1018,16 +1057,8 @@
                 padding: 70px 0;
             }
             
-            .hero {
-                padding: 150px 0 60px;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
             .banner-slides {
-                height: 400px;
+                height: 450px;
             }
             
             .banner-slide {
@@ -1065,23 +1096,26 @@
         }
 
         @media (max-width: 576px) {
-            .hero-btns {
-                flex-direction: column;
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .btn {
-                width: 100%;
-                justify-content: center;
+            .banner-section {
+                margin-top: 80px;
             }
             
             .banner-slides {
-                height: 350px;
+                height: 400px;
             }
             
             .banner-slide {
                 padding: 0 20px;
+            }
+            
+            .slide-content h2 {
+                font-size: 1.7rem;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                margin: 0 0 15px 0;
+                max-width: 300px;
             }
             
             .calculator-content {
@@ -1125,30 +1159,14 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
-            <h1>Excelência Jurídica em Salvador e Região</h1>
-            <p>Dr. Lourival Oliveira oferece soluções jurídicas completas e personalizadas com mais de 15 anos de experiência. Atuação estratégica em todas as áreas do direito com foco em resultados.</p>
-            <div class="hero-btns">
-                <a href="#contato" class="btn btn-secondary">
-                    <i class="fas fa-phone-alt"></i> Agendar Consulta
-                </a>
-                <a href="#areas" class="btn btn-outline">
-                    <i class="fas fa-balance-scale"></i> Ver Áreas de Atuação
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Banner Slider -->
-    <section class="container">
+    <!-- Banner Slider - AGORA NO TOPO, LOGO APÓS O HEADER -->
+    <section class="banner-section" id="home">
         <div class="banner-slider">
             <div class="banner-slides">
                 <!-- Slide 1 -->
                 <div class="banner-slide active">
                     <div class="slide-content">
-                        <h2>Defesa Jurídica Estratégica</h2>
+                        <h2>Defesa Jurídica Estratégica em Salvador</h2>
                         <p>Atuação em todas as instâncias jurídicas com planejamento personalizado para cada caso, maximizando as chances de sucesso.</p>
                         <a href="#contato" class="btn btn-secondary">Consultoria Personalizada</a>
                     </div>
@@ -1194,6 +1212,21 @@
                 <span class="banner-dot" data-slide="1"></span>
                 <span class="banner-dot" data-slide="2"></span>
                 <span class="banner-dot" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Buttons - SEMPRE VISÍVEIS -->
+    <section class="cta-buttons">
+        <div class="container">
+            <h2>Precisa de Assistência Jurídica?</h2>
+            <div>
+                <a href="#areas" class="btn btn-secondary">
+                    <i class="fas fa-balance-scale"></i> Ver Áreas de Atuação
+                </a>
+                <a href="#contato" class="btn">
+                    <i class="fas fa-phone-alt"></i> Agendar Consulta
+                </a>
             </div>
         </div>
     </section>
@@ -1250,7 +1283,9 @@
                 <p>Conheça a trajetória e experiência do profissional</p>
             </div>
             
-            <div class="contact-container">
+            <div class="sobre-container">
+                <div class="sobre-img"></div>
+                
                 <div>
                     <h3>Experiência e Formação</h3>
                     <p>Dr. Lourival Oliveira é advogado com mais de 15 anos de atuação em Salvador e região, formado pela Universidade Federal da Bahia com pós-graduação em Direito Civil e Processo Civil.</p>
@@ -1279,46 +1314,10 @@
                             <p>Direito do Trabalho e Previdenciário</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="contact-form fade-in">
-                    <h3>Agende uma Consulta</h3>
-                    <form id="consultaForm">
-                        <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="tel" id="telefone" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="assunto">Assunto da Consulta</label>
-                            <select id="assunto" class="form-control" required>
-                                <option value="">Selecione uma opção</option>
-                                <option value="civil">Direito Civil</option>
-                                <option value="empresarial">Direito Empresarial</option>
-                                <option value="familia">Direito da Família</option>
-                                <option value="trabalho">Direito do Trabalho</option>
-                                <option value="penal">Direito Penal</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mensagem">Breve descrição do caso</label>
-                            <textarea id="mensagem" class="form-control" rows="4"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Enviar Solicitação</button>
-                    </form>
+                    
+                    <a href="#contato" class="btn" style="margin-top: 20px;">
+                        <i class="fas fa-calendar-alt"></i> Agendar Consulta
+                    </a>
                 </div>
             </div>
         </div>
@@ -1335,7 +1334,7 @@
             <div class="areas-grid">
                 <!-- Área 1 -->
                 <div class="area-card fade-in">
-                    <div class="area-image" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="area-image"></div>
                     <div class="area-content">
                         <h3><i class="fas fa-balance-scale area-icon"></i> Direito Civil</h3>
                         <p>Atuação completa em questões contratuais, responsabilidade civil, direitos do consumidor, propriedade e posse.</p>
@@ -1350,7 +1349,7 @@
                 
                 <!-- Área 2 -->
                 <div class="area-card fade-in">
-                    <div class="area-image" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');"></div>
+                    <div class="area-image"></div>
                     <div class="area-content">
                         <h3><i class="fas fa-briefcase area-icon"></i> Direito Empresarial</h3>
                         <p>Assessoria jurídica completa para empresas de todos os portes, desde a constituição até questões complexas.</p>
@@ -1365,7 +1364,7 @@
                 
                 <!-- Área 3 -->
                 <div class="area-card fade-in">
-                    <div class="area-image" style="background-image: url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="area-image"></div>
                     <div class="area-content">
                         <h3><i class="fas fa-home area-icon"></i> Direito da Família</h3>
                         <p>Atuação sensível e estratégica em questões familiares, sempre com abordagem humanizada e focada em soluções.</p>
@@ -1380,7 +1379,7 @@
                 
                 <!-- Área 4 -->
                 <div class="area-card fade-in">
-                    <div class="area-image" style="background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="area-image"></div>
                     <div class="area-content">
                         <h3><i class="fas fa-user-tie area-icon"></i> Direito do Trabalho</h3>
                         <p>Defesa de direitos trabalhistas tanto para empregados quanto para empregadores com estratégias personalizadas.</p>
@@ -1395,7 +1394,7 @@
                 
                 <!-- Área 5 -->
                 <div class="area-card fade-in">
-                    <div class="area-image" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="area-image"></div>
                     <div class="area-content">
                         <h3><i class="fas fa-user-shield area-icon"></i> Direito Penal</h3>
                         <p>Defesa criminal em todas as instâncias, com atuação estratégica focada na preservação de direitos e garantias.</p>
@@ -1410,7 +1409,7 @@
                 
                 <!-- Área 6 -->
                 <div class="area-card fade-in">
-                    <div class="area-image" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="area-image"></div>
                     <div class="area-content">
                         <h3><i class="fas fa-car area-icon"></i> Direito do Trânsito</h3>
                         <p>Defesa em processos administrativos e judiciais de trânsito, com foco na preservação da CNH e direitos do condutor.</p>
@@ -1437,7 +1436,7 @@
             <div class="articles-grid">
                 <!-- Artigo 1 -->
                 <div class="article-card fade-in">
-                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="article-image"></div>
                     <div class="article-content">
                         <div class="article-meta">
                             <span class="article-tag">Direito Civil</span>
@@ -1451,7 +1450,7 @@
                 
                 <!-- Artigo 2 -->
                 <div class="article-card fade-in">
-                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80');"></div>
+                    <div class="article-image"></div>
                     <div class="article-content">
                         <div class="article-meta">
                             <span class="article-tag">Direito Empresarial</span>
@@ -1465,7 +1464,7 @@
                 
                 <!-- Artigo 3 -->
                 <div class="article-card fade-in">
-                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="article-image"></div>
                     <div class="article-content">
                         <div class="article-meta">
                             <span class="article-tag">Direito da Família</span>
@@ -1479,7 +1478,7 @@
                 
                 <!-- Artigo 4 -->
                 <div class="article-card fade-in">
-                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="article-image"></div>
                     <div class="article-content">
                         <div class="article-meta">
                             <span class="article-tag">Direito do Trabalho</span>
@@ -2049,12 +2048,6 @@
         });
         
         // Form submissions
-        document.getElementById('consultaForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Solicitação de consulta enviada com sucesso! Entraremos em contato em até 24 horas.');
-            this.reset();
-        });
-        
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Mensagem enviada com sucesso! Retornaremos em breve.');
